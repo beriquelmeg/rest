@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D31F941D-85E3-495C-829A-C320E58E73E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Diseno</RootNamespace>
+    <AssemblyName>Diseno</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Diseno.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.12.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Pagina_Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Pagina_Administrador.Designer.cs">
+      <DependentUpon>Pagina_Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodega_r\Bodega_restau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega_r\Bodega_restau.Designer.cs">
+      <DependentUpon>Bodega_restau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodega_r\Compra_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega_r\Compra_Stock.Designer.cs">
+      <DependentUpon>Compra_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodega_r\Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega_r\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cocinero_r\Cocinero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cocinero_r\Cocinero.Designer.cs">
+      <DependentUpon>Cocinero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cocinero_r\Pedidos_Cocina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cocinero_r\Pedidos_Cocina.Designer.cs">
+      <DependentUpon>Pedidos_Cocina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finanzas_r\Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finanzas_r\Caja.Designer.cs">
+      <DependentUpon>Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finanzas_r\Datos_Ventas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos_Ventas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Finanzas_r\Reporte_ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finanzas_r\Reporte_ventas.Designer.cs">
+      <DependentUpon>Reporte_ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Garzon_r\Garzon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Garzon_r\Garzon.Designer.cs">
+      <DependentUpon>Garzon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Garzon_r\Ingresar_Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Garzon_r\Ingresar_Pedido.Designer.cs">
+      <DependentUpon>Ingresar_Pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Garzon_r\Registro_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Garzon_r\Registro_Clientes.Designer.cs">
+      <DependentUpon>Registro_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inicio.Designer.cs">
+      <DependentUpon>inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\productos.Designer.cs">
+      <DependentUpon>productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recepcion_r\Recepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recepcion_r\Recepcion.Designer.cs">
+      <DependentUpon>Recepcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Administrador\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Pagina_Administrador.resx">
+      <DependentUpon>Pagina_Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodega_r\Bodega_restau.resx">
+      <DependentUpon>Bodega_restau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodega_r\Compra_Stock.resx">
+      <DependentUpon>Compra_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodega_r\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cocinero_r\Cocinero.resx">
+      <DependentUpon>Cocinero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cocinero_r\Pedidos_Cocina.resx">
+      <DependentUpon>Pedidos_Cocina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finanzas_r\Caja.resx">
+      <DependentUpon>Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finanzas_r\Reporte_ventas.resx">
+      <DependentUpon>Reporte_ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finanzas_r\Report_ventas.rdlc" />
+    <EmbeddedResource Include="Garzon_r\Garzon.resx">
+      <DependentUpon>Garzon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Garzon_r\Ingresar_Pedido.resx">
+      <DependentUpon>Ingresar_Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Garzon_r\Registro_Clientes.resx">
+      <DependentUpon>Registro_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inicio.resx">
+      <DependentUpon>inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\productos.resx">
+      <DependentUpon>productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Recepcion_r\Recepcion.resx">
+      <DependentUpon>Recepcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Finanzas_r\Datos_Ventas.xsc">
+      <DependentUpon>Datos_Ventas.xsd</DependentUpon>
+    </None>
+    <None Include="Finanzas_r\Datos_Ventas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos_Ventas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Finanzas_r\Datos_Ventas.xss">
+      <DependentUpon>Datos_Ventas.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Acceso_Datos\Acceso_Datos.csproj">
+      <Project>{3172300A-0901-40EF-B832-46CF3A0AC9FC}</Project>
+      <Name>Acceso_Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary1\Capa_Transversal.csproj">
+      <Project>{baec4780-db3e-48ec-87f5-0c95f81a4e97}</Project>
+      <Name>Capa_Transversal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo_Negocio\Modelo_Negocio.csproj">
+      <Project>{25d610ef-d041-4167-bc55-9b577046b331}</Project>
+      <Name>Modelo_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\cocinero.png" />
+    <None Include="Resources\Cliente.png" />
+    <None Include="Resources\stack %282%29.png" />
+    <None Include="Resources\stack %281%29.png" />
+    <None Include="Resources\stack.png" />
+    <None Include="Resources\warehouse.png" />
+    <None Include="Resources\warehouse %281%29.png" />
+    <None Include="Resources\button6.Image.png" />
+    <None Include="Resources\stock.png" />
+    <None Include="Resources\btnsalir.Image1.png" />
+    <None Include="Resources\btnsalir.Image.png" />
+    <None Include="Imagenes\add user.png" />
+    <Content Include="Imagenes\add-friend.png" />
+    <Content Include="Imagenes\Fondo_inicio.jpg" />
+    <Content Include="Imagenes\reloading.png" />
+    <Content Include="Imagenes\Restaurante XXI.png" />
+    <Content Include="Imagenes\Restaurante XXI1.png" />
+    <Content Include="Imagenes\search.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
